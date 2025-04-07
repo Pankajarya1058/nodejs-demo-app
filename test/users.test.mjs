@@ -11,6 +11,10 @@ describe('Users API', () => {
   it('should return hello world', async () => {
     const res = await chai.request(app).get('/');
     expect(res).to.have.status(200);
-    expect(res.text).to.equal('Hello World!');
+    expect(res).to.be.html;
+    expect(res.text).to.include('Hello, from nodejs-demo-app');
   });
 });
+
+
+

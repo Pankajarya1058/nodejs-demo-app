@@ -62,11 +62,11 @@ cd ~/.ssh
 ```
 ### Copy public key into "authorized_keys" file
 ```
-cp *.pub >> authorized_keys
+cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 ```
 ### Copy private key
 ```
-cat id_rsaddd 
+cat ~/.ssh/id_rsa
 ```
 
 ## Setup Secrets in GitHub

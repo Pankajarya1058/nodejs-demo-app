@@ -43,7 +43,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-            docker stop nodejs-app || true
-            docker rm nodejs-app || true
+            # docker stop nodejs-app || true
+            # docker rm nodejs-app || true
             docker pull ${{ secrets.DOCKER_USERNAME }}/nodejs-app:latest
             docker run -d --name nodejs-app -p 3000:3000 ${{ secrets.DOCKER_USERNAME }}/nodejs-app:latest

@@ -30,29 +30,29 @@ To deploy this project launch the EC2 instance on AWS.
 In our case we launching ubuntu machine.
 After that run following command on your Machine.
 
-##### Update the Machine.
+### Update the Machine.
 ```
   sudo apt-get update
 ```
-##### Install Git
+### Install Git
 ```
   sudo apt-get install -y git
 ```
-##### Install Docker 
+### Install Docker 
 ```
   sudo apt-get install -y docker.io
 ```
-##### Add current user (ubuntu) in docker group.
+### Add current user (ubuntu) in docker group.
 ```
   sudo usermod -aG docker $USER
 ```
-##### update the group
+### update the group
 ```
   newgrp docker
 ```
 
 
-#### Now, Create ssh key on ubuntu Machine by running following command.
+### Now, Create ssh key on ubuntu Machine by running following command.
 
 ```
 ssh-keygen -t rsa -b 4096
@@ -60,11 +60,11 @@ ssh-keygen -t rsa -b 4096
 ```
 cd ~/.ssh
 ```
-##### Copy public key into "authorized_keys" file
+### Copy public key into "authorized_keys" file
 ```
 cp *.pub >> authorized_keys
 ```
-##### Copy private key
+### Copy private key
 ```
 cat id_rsaddd 
 ```
@@ -83,11 +83,11 @@ To run this project, you will need to add the following Secrets to your github R
 | `SSH_PRIVATE_KEY` | `private key of your EC2 instance that you generated earlier`| 
 
 
-### Clone this Repository on your local machine
+## Clone this Repository on your local machine
 ```
 git clone https://github.com/Pankajarya1058/nodejs-demo-app.git
 ```
-##### Now, push to your own Repository that you have recently created
+### Now, push to your own Repository that you have recently created
 ```
 git add .
 git commit -m "Initial commit"
